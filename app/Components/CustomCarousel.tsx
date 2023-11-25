@@ -4,6 +4,10 @@ import React, { useState } from 'react';
 const CustomCarousel = ({ images }: any) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const style = {
+    zIndex: 1,
+  }
+
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => {
       if (prevIndex === 0) return images.length - 1;
@@ -43,7 +47,10 @@ const CustomCarousel = ({ images }: any) => {
                 width: '100%',
                 textAlign: images[currentIndex].captionPosition === 'left' ? 'left' : 'right',
                 color: '#fff',
-                padding: '20px',
+                padding: '30px',
+                marginLeft: images[currentIndex].captionPosition === 'left' ? '40px' : '-40px',
+                // margin: '0px 0px 0px 40px',
+                zIndex: 1,
               }}
             >
               <h3>{images[currentIndex].caption}</h3>
@@ -53,10 +60,10 @@ const CustomCarousel = ({ images }: any) => {
         </div>
       </div>
 
-      <button className="prev" onClick={handlePrev}>
+      <button className="prev" onClick={handlePrev} style={style}>
         &lt;
       </button>
-      <button className="next" onClick={handleNext}>
+      <button className="next" onClick={handleNext} style={style}>
         &gt;
       </button>
     </div>
