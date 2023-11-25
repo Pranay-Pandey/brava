@@ -4,8 +4,8 @@ import CustomCarousel from './CustomCarousel'; // Adjust the path based on your 
 const Slideshow = () => {
   const TextStyle = {
     color: 'white',
-    fontSize: '50px',
-    fontWeight: 'bold',
+    fontSize: '60px',
+    fontWeight: '900',
   }
 
   const ButtonStyle = {

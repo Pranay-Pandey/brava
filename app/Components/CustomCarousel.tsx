@@ -1,14 +1,12 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const CustomCarousel = ({ images }: any) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const style = {
-    zIndex: 1,
-  }
+  const [animate, setAnimate] = useState(false);
 
   const handlePrev = () => {
+    setAnimate(true);
     setCurrentIndex((prevIndex) => {
       if (prevIndex === 0) return images.length - 1;
       return prevIndex - 1;
@@ -16,16 +14,29 @@ const CustomCarousel = ({ images }: any) => {
   };
 
   const handleNext = () => {
+    setAnimate(true);
     setCurrentIndex((prevIndex) => {
       if (prevIndex === images.length - 1) return 0;
       return prevIndex + 1;
     });
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimate(false);
+    }, 500); // Set the timeout to match the animation duration
+
+    return () => clearTimeout(timer);
+  }, [currentIndex]);
+
+  const style = {
+    zIndex: 1,
+  };
+
   return (
-    <div className="custom-carousel" style={{ display:'flex', width: '100%', height: '65vh', position: 'relative' }}>
+    <div className="custom-carousel" style={{ display: 'flex', width: '100%', height: '65vh', position: 'relative' }}>
       <div className="slides" style={{ overflow: 'hidden' }}>
-        <div className="slide" style={{ height: '100%', width: '100%', position: 'relative' , overflow: 'hidden',}}>
+        <div className="slide" style={{ height: '100%', width: '100%', position: 'relative', overflow: 'hidden', }}>
           <img
             src={images[currentIndex].url}
             alt={`slide ${currentIndex + 1}`}
@@ -39,7 +50,7 @@ const CustomCarousel = ({ images }: any) => {
           />
           {images[currentIndex].caption && (
             <div
-              className="caption"
+              className={`caption ${animate ? 'animated' : ''}`}
               style={{
                 position: 'absolute',
                 top: '50%',

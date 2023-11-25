@@ -196,3 +196,22 @@ img {
     z-index: 5;
   }
    */ 
+
+.thb-tem{
+    position: relative;
+  }
+
+.thb-item-count{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    top: 26px;
+    left: 13px;
+    font-size: 10px;
+  }

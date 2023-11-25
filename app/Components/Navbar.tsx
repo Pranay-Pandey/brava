@@ -5,6 +5,7 @@ import { GoPerson } from "react-icons/go";
 import { IoSearchSharp } from "react-icons/io5";
 import { FaTiktok } from 'react-icons/fa';
 import { LuShoppingBag } from "react-icons/lu";
+import { IconContext } from "react-icons";
 
 const Navbar = () => {
     const divStyle = {
@@ -18,6 +19,9 @@ const Navbar = () => {
     const whiteColor = {
         color: 'white'
     }
+
+    const iconStyle={'color': 'white', 'display': 'flex',
+    'alignItems': 'center',} 
 
     
   return (
@@ -46,19 +50,20 @@ const Navbar = () => {
     <div className='flex space-x-4 align-middle' style={{'marginRight': "30px"}}>
         <div style={{'color': 'white', 'display': 'flex', 'fontWeight': 'bold',
             'alignItems': 'center',}}>become an affiliate </div>
-        <div className='align-middle' style={{'color': 'white', 'display': 'flex',
-            'alignItems': 'center',} }><FaTwitter/></div>
-            <div className='align-middle' style={{'color': 'white', 'display': 'flex',
-                'alignItems': 'center',} }><FaTiktok/></div>
-        <div className='align-middle' style={{'color': 'white', 'display': 'flex',
-            'alignItems': 'center',} }><FaInstagram/></div>
-        <div className='align-middle' style={{'color': 'white', 'display': 'flex',
-            'alignItems': 'center',} }><GoPerson/></div>
-        <div className='align-middle' style={{'color': 'white', 'display': 'flex',
-            'alignItems': 'center',} }><IoSearchSharp/></div>
-        <div className='align-middle' style={{'color': 'white', 'display': 'flex',
-            'alignItems': 'center',} }><LuShoppingBag/></div>
-
+            {/* <IconContext.Provider value={{ className: "shared-class", size: '70' }}>
+             <> */}
+  
+                <div style={iconStyle }><FaTwitter size='15px'/></div>
+                <div style={iconStyle }><FaTiktok size="17px"/></div>
+                <div style={iconStyle }><FaInstagram size="18px"/></div>
+                <div style={iconStyle }><GoPerson size="20px"/></div>
+                <div style={iconStyle }><IoSearchSharp size="20px"/></div>
+                <div className='thb-tem' style={iconStyle}>
+                <div style={iconStyle}><LuShoppingBag size="20px"/></div>
+                <span className="thb-item-count">0</span>
+                </div>
+            {/* </>
+            </IconContext.Provider> */}
     </div>
     </div>
     </>
