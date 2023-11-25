@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'autumn';
+  src: url('./../assets/Adlery-Pro-trial.ttf');
+  font-weight: 400;
+  font-style: normal;
+  }
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +23,176 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
 }
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.slide {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Change the last value to adjust opacity */
+}
+
+// Add the following styles to your CSS or inline styles in your component
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.custom-carousel {
+  display: flex;
+  width: 100vw; /* Full viewport width */
+  height: 65vh;
+  position: relative;
+}
+
+.slides {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  object-fit: cover;
+  object-position: 50% 0%; /* Center horizontally, crop from the top */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: left;
+  color: #fff;
+  padding: 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Adjust the overlay color and opacity as needed */
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5); /* Adjust the button background color and opacity as needed */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+}
+
+
+
+/* .card{
+    width: 200px;
+    display: flex;
+    height: 100px;
+  }
+  
+  .card--circle>img{
+    object-fit: cover;
+  }
+  
+  .card--text{
+    width: 150px;
+    height: 100px;
+    background-color: green;
+    margin-left: -50px;
+    border-radius: 5px;
+    display: flex;
+  }
+  
+  .card--circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* background: url('https://serv1.dragndropz.com/user_images/2023_11_25/9545_h2saqi_2cc4918500ae144fcef8409864396b40.png') center/cover; */
+    /* position: relative;
+  }
+
+  .no--text{
+    width: 50px;
+    height: 100px;
+    background-color: yellow;
+    z-index: 5;
+  }
+   */ 
