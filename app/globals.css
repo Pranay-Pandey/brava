@@ -88,7 +88,7 @@ body {
   background-color: rgba(0, 0, 0, 0.2); /* Change the last value to adjust opacity */
 }
 
-// Add the following styles to your CSS or inline styles in your component
+/*// Add the following styles to your CSS or inline styles in your component*/
 body, html {
   margin: 0;
   padding: 0;
@@ -160,43 +160,6 @@ img {
   right: 0;
 }
 
-
-
-/* .card{
-    width: 200px;
-    display: flex;
-    height: 100px;
-  }
-  
-  .card--circle>img{
-    object-fit: cover;
-  }
-  
-  .card--text{
-    width: 150px;
-    height: 100px;
-    background-color: green;
-    margin-left: -50px;
-    border-radius: 5px;
-    display: flex;
-  }
-  
-  .card--circle{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    /* background: url('https://serv1.dragndropz.com/user_images/2023_11_25/9545_h2saqi_2cc4918500ae144fcef8409864396b40.png') center/cover; */
-    /* position: relative;
-  }
-
-  .no--text{
-    width: 50px;
-    height: 100px;
-    background-color: yellow;
-    z-index: 5;
-  }
-   */ 
-
 .thb-tem{
     position: relative;
   }
@@ -215,3 +178,32 @@ img {
     left: 13px;
     font-size: 10px;
   }
+
+  
+  .thb-tem:hover .thb-item-count {
+    background-color: yellow;
+  }
+
+.underline-text {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+.underline-text:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  background: #000;
+  height: 4px;
+  transition-property: left right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.underline-text:hover:after,
+.underline-text:focus:after,
+.underline-text:active:after {
+  right: 0;
+}
