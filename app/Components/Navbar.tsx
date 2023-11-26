@@ -12,10 +12,26 @@ const Navbar = () => {
     fontWeight: 'bold',
     alignItems: 'center',
     transition: 'color 0.3s', // Add a smooth transition effect
+    cursor: 'pointer',
   };
 
   const MouseEnter = (e:any)=>(e.currentTarget.style.color = 'yellow');
   const MouseLeave = (e:any)=>(e.currentTarget.style.color = 'white');
+
+  const menuStyle = {
+    color: 'white',
+    cursor: 'pointer',
+  };
+
+  const affiliateStyle = {
+    display: 'flex',
+    fontWeight: 'bold',
+    alignItems: 'center',
+    transition: 'color 0.3s',
+    color: 'white',
+    cursor: 'pointer',
+};
+
 
 
   return (
@@ -23,10 +39,10 @@ const Navbar = () => {
       <div style={{ height: '80px', backgroundColor: '#212122', fontSize: '13px', fontWeight: 'bold', fontFamily: 'Roboto' }} className='flex justify-between'>
         <nav className='flex space-x-6 align' style={{ 'display': 'flex', 'alignItems': 'center', marginLeft: '40px' }}>
           <ul className='flex space-x-6'>
-            <li style={{ color: 'white' }} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>brands</li>
-            <li style={{ color: 'white' }} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>shop</li>
-            <li style={{ color: 'white' }} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>premuium</li>
-            <li style={{ color: 'white' }} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>gift cards</li>
+            <li style={menuStyle} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>brands</li>
+            <li style={menuStyle} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>shop</li>
+            <li style={menuStyle} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>premuium</li>
+            <li style={menuStyle} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>gift cards</li>
           </ul>
         </nav>
         <div className='flex space-x-6'>
@@ -34,12 +50,7 @@ const Navbar = () => {
         </div>
         <div className='flex space-x-4 align-middle' style={{ 'marginRight': '30px' }}>
           <div className='underline-text'
-            style={{ display: 'flex',
-            fontWeight: 'bold',
-            alignItems: 'center',
-            transition: 'color 0.3s',
-        color: 'white', }
-        }    
+            style={affiliateStyle} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}    
           >
             become an affiliate
           </div>

@@ -144,15 +144,28 @@ img {
   background: rgba(0, 0, 0, 0.2); /* Adjust the overlay color and opacity as needed */
 }
 
+.card--rectangle{
+  position: relative;
+}
+
 .card--shop-now{
   bottom: 0px;
   color: white;
   text-decoration: underline;
-  margin-top: 30px;
   font-size: 15px;
   text-align: end;
   font-weight: 500;
+  margin-bottom: 30px;
+  position: absolute;
+  bottom: -3px;
+  right: 20px;
 }
+
+/* .card--text--div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
 
 .prev,
 .next {

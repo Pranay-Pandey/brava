@@ -9,7 +9,7 @@ const Mark = ()=>{
 
 
     return (<>
-        <Marquee speed={80} autoFill={true} style={{'marginTop': '80px', 'marginBottom':'50px'}}>
+        <Marquee speed={80} autoFill={true} >
         <Card url='https://i.postimg.cc/JtMLNvTB/icon1.png' text='Dankestu' color="black"/>
         <div style={spacer}/>
         <Card url='https://i.postimg.cc/rRV2qRd9/icon2.png' text='pendulum' color="orange"/>
