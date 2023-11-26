@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import CustomCarousel from './CustomCarousel'; // Adjust the path based on your project structure
 
@@ -9,18 +10,25 @@ const Slideshow = () => {
   }
 
   const ButtonStyle = {
-    padding: '15px 35px',
-    borderRadius: '25px',
-    backgroundColor: 'black',
-    fontSize: '16px',
+    // padding: '15px 35px',
+    // borderRadius: '25px',
+    // backgroundColor: 'black',
+    // fontSize: '16px',
+
   }
+
+  const ButtonComp = (
+    <button className="shop--now-button" >
+      shop now
+    </button>
+  )
 
   const Text1 = (
     <div style={TextStyle}>
       <h1>heritage</h1>
       <h1>hoodie</h1>
 
-      <button style={ButtonStyle}>shop now</button>
+      {ButtonComp}
     </div>
   )
 
@@ -30,7 +38,7 @@ const Slideshow = () => {
       <h1>zip</h1>
       <h1>hoodies</h1>
 
-      <button style={ButtonStyle}>shop now</button>
+      {ButtonComp}
     </div>
   )
 
@@ -40,7 +48,7 @@ const Slideshow = () => {
       <h1>woman</h1>
       <h1>tanks</h1>
 
-      <button style={ButtonStyle}>shop now</button>
+      {ButtonComp}
     </div>
   )
 
@@ -49,7 +57,7 @@ const Slideshow = () => {
       <h1>heritage</h1>
       <h1>trees</h1>
 
-      <button style={ButtonStyle}>shop now</button>
+      {ButtonComp}
     </div>
   )
 

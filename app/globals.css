@@ -144,6 +144,16 @@ img {
   background: rgba(0, 0, 0, 0.2); /* Adjust the overlay color and opacity as needed */
 }
 
+.card--shop-now{
+  bottom: 0px;
+  color: white;
+  text-decoration: underline;
+  margin-top: 30px;
+  font-size: 15px;
+  text-align: end;
+  font-weight: 500;
+}
+
 .prev,
 .next {
   position: absolute;
@@ -206,4 +216,38 @@ img {
 .underline-text:focus:after,
 .underline-text:active:after {
   right: 0;
+}
+
+
+.shop--now-button {
+  position: relative;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.shop--now-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: transform 0.3s;
+  transform: translateY(100%);
+  z-index: -1; /* Ensure the pseudo-element is behind the text */
+}
+
+.shop--now-button:hover::before {
+  transform: translateY(0);
+}
+
+.shop--now-button:hover {
+  color: white;
+  z-index: 1; /* Ensure the text is on top when hovered */
 }

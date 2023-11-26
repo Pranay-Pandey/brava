@@ -50,6 +50,10 @@ const Card = ({ url, text , color}: { url: string; text: string ; color:string})
         <div className="no--use" style={noUseStyle}></div>
         <div className="card--text" style={textStyles}>
           {text}
+        
+        <div className="card--shop-now">
+          shop now
+        </div>
         </div>
       </div>
     </div>
