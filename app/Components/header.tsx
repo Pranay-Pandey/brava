@@ -5,7 +5,7 @@ const Header = () => {
     <>
       <div
         className="flex place-content-center p-1.5 "
-        style={{verticalAlign: "middle", background: "#e1c200" , fontSize: "12px", fontWeight: "700", height: '38px'}}
+        style={{verticalAlign: "middle", background: "#e1c200" , fontSize: "12px", fontWeight: "700", height: '30px'}}
       >
         VISIT US ON TIKTOK @BRAVALAND.COM
       </div>

@@ -159,6 +159,7 @@ img {
   position: absolute;
   bottom: -3px;
   right: 20px;
+  cursor: pointer;
 }
 
 /* .card--text--div{
